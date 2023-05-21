@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Leave Management System Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard 2.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome to the Leave Management System Dashboard</h1>
+    <div class="leave-balance">
+      <h2>Leave Balance</h2>
+      <p>Annual Leave: <span id="annual-leave"></span></p>
+      <p>Sick Leave: <span id="sick-leave"></span></p>
+    </div>
+    <div class="leave-eligibility">
+      <h2>Leave Eligibility</h2>
+      <p>You are eligible for <span id="eligibility"></span> days of leave per year.</p>
+    </div>
+    <button class="leave-application-button"><a class="colorf" href="leave_application.html">Apply for leave</a></button>
+    <div class="leave-history">
+      <h2>Leave History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Duration</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="leave-history-table">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="leave-history">
+  <h2>Leave History</h2>
+  <div class="table-container">
+    <table id="leave-history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Reason</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <th><input type="date" id="date-filter"></th>
+          <th><input type="text" id="reason-filter"></th>
+          <th>
+            <select id="type-filter">
+              <option value="">All</option>
+              <option value="sick">Sick Leave</option>
+              <option value="vacation">Vacation Leave</option>
+              <option value="personal">Personal Leave</option>
+            </select>
+          </th>
+          <th>
+            <select id="status-filter">
+              <option value="">All</option>
+              <option value="approved">Approved</option>
+              <option value="pending">Pending</option>
+              <option value="denied">Denied</option>
+            </select>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="leave-history-body">
+        <!-- Leave history data will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <script type="text/javascript" src="dashboard 2.js"></script>
+</body>
+</html>

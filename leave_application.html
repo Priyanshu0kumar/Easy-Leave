@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leave Application</title>
+    <style>
+      /* CSS styles for the page layout */
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Leave Application</h1>
+    <form method="post" action="submit_leave_application.php">
+      <label for="from-date">From Date:</label>
+      <input type="date" id="from-date" name="from-date" required>
+
+      <label for="to-date">To Date:</label>
+      <input type="date" id="to-date" name="to-date" required>
+
+      <label for="reason">Reason:</label>
+      <textarea id="reason" name="reason" rows="4" required></textarea>
+
+      <label for="address">Address for Communication:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label for="superior-email">Superior's Email:</label>
+      <input type="email" id="superior-email" name="superior-email" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 20px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}
